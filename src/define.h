@@ -18,6 +18,8 @@ extern int runTime;
 extern int Seconds;
 extern int Minutes;
 
+extern int lightStatus;
+
 extern float oneCell;
 extern float twoCell;
 extern float threeCell;

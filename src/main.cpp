@@ -2,18 +2,22 @@
 #include <define.h>
 #include <lcd.h>
 #include <rpm.h>
+#include <lights.h>
 
 void setup()
 {
   Serial.begin(9600);
   rpmSetup();
   lcdSetup();
+  lightSetup();
 }
 
 void loop()
 {
   int screenSwitchState = digitalRead(screenSwitch);
   rpmLoop();
+  lightLoop();
+  lcdLoop();
 
   if (screenSwitchState == HIGH)
   {
@@ -28,40 +32,28 @@ void loop()
     } else {
     if (buttonActive == true)
     {
+      if(currentScreen == 0)
+      {
+        currentScreen = 1;
+      } else if(currentScreen == 1)
+      {
+        currentScreen = 0;
+      }
     	buttonActive = false;
     }
     if (longPressActive == true)
     {
+      if(lightStatus == 0)
+      {
+        lightStatus = 1;
+      }
+      if(lightStatus == 1)
+      {
+        lightStatus = 0;
+      }
+      lightStatus = 1;
       longPressActive = false;
-    } else
-    {
-
+      }
     }
   }
-}
-
-
-  //Serial.println(digitalRead(screenSwitch));
-  /* Original Button Code
-  if(screenSwitchState == LOW)
-  {
-    currentScreen = 1;
-    if(previousScreen == 2)
-    {
-      clearScreen();
-    }
-    batteryScreen();
-    previousScreen = 1;
-  }
-  else
-  {
-    currentScreen = 2;
-    if(previousScreen == 1)
-    {
-      clearScreen();
-    }
-    homeScreen();
-    previousScreen = 2;
-  }
-  */
 }

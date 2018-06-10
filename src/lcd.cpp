@@ -25,6 +25,7 @@ void clearScreen()
 
 void batteryScreen()
 {
+  currentScreen = 1;
 lcd.setCursor(0,0);
 lcd.print("1s=" + String(oneCell,2));
 
@@ -41,6 +42,7 @@ lcd.print("4s=" + String(fourCell,2));
 
 void homeScreen()
 {
+  currentScreen = 0;
   unsigned long Now = millis()/1000;
   Seconds = Now%60;
   Minutes = (Now/60)%60;
@@ -54,4 +56,12 @@ void homeScreen()
   lcd.setCursor(8,1);
   lcd.print("Max=" + maxRPM);
 
+}
+
+void lcdLoop()
+{
+  if(currentScreen == 0)
+  {homeScreen();}
+  if(currentScreen == 1)
+  {batteryScreen();}
 }

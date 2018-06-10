@@ -6,7 +6,7 @@ long longPressTime = 250;
 int screenSwitch = 30;
 
 int previousScreen;
-int currentScreen;
+int currentScreen = 0;
 
 int currentSpeed;
 int maxSpeed;
@@ -17,6 +17,8 @@ int maxRPM;
 int runTime;
 int Seconds;
 int Minutes;
+
+int lightStatus = 0;
 
 float oneCell=3.78;
 float twoCell=3.78;
