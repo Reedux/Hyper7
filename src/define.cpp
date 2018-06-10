@@ -5,6 +5,10 @@ long longPressTime = 250;
 
 int screenSwitch = 30;
 
+int frontLights = 20;
+int rearLights = 21;
+int floorLights = 22;
+
 int previousScreen;
 int currentScreen = 0;
 

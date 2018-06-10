@@ -5,6 +5,10 @@ extern long longPressTime;
 
 extern int screenSwitch;
 
+extern int frontLights;
+extern int rearLights;
+extern int floorLights;
+
 extern int previousScreen;
 extern int currentScreen;
 
