@@ -1,6 +1,6 @@
 -IC:\Users\Reedux\.platformio\packages\framework-arduinoavr\cores\arduino
 -IC:\Users\Reedux\.platformio\packages\framework-arduinoavr\variants\mega
--IC:\Users\Reedux\Documents\PlatformIO\Projects\Hyper\src
+-IC:\Users\Reedux\Documents\GitHub\Hyper7\src
 -IC:\Users\Reedux\.platformio\packages\framework-arduinoavr\libraries\LiquidCrystal\src
 -IC:\Users\Reedux\.platformio\packages\framework-arduinoavr\libraries\__cores__\arduino\EEPROM\src
 -IC:\Users\Reedux\.platformio\packages\framework-arduinoavr\libraries\__cores__\arduino\HID\src
