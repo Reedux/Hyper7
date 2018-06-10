@@ -1,3 +1,8 @@
+extern bool buttonActive;
+extern bool longPressActive;
+extern long buttonTimer;
+extern long longPressTime;
+
 extern int screenSwitch;
 
 extern int previousScreen;

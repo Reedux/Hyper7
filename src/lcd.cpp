@@ -50,7 +50,7 @@ void homeScreen()
   lcd.setCursor(8,0);
   lcd.print("RT=" + runTime);
   lcd.setCursor(0,1);
-  lcd.print("RP/M=" + currentRPM);
+  lcd.print("RPM=" + currentRPM);
   lcd.setCursor(8,1);
   lcd.print("Max=" + maxRPM);
 

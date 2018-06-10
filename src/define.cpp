@@ -1,9 +1,7 @@
-/*
-  Pin Allocations
-
-Pins 3 - 8 Reserved for LCD Display!
-
-*/
+bool buttonActive = false;
+bool longPressActive = false;
+long buttonTimer = 0;
+long longPressTime = 250;
 
 int screenSwitch = 30;
 

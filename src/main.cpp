@@ -5,18 +5,44 @@
 
 void setup()
 {
+  Serial.begin(9600);
   rpmSetup();
   lcdSetup();
-  Serial.begin(9600);
 }
 
 void loop()
 {
-
+  int screenSwitchState = digitalRead(screenSwitch);
   rpmLoop();
 
-  int screenSwitchState = digitalRead(screenSwitch);
+  if (screenSwitchState == HIGH)
+  {
+    if (buttonActive == false)
+    {
+      buttonActive = true;
+      buttonTimer = millis();
+    }
+    if ((millis() - buttonTimer > longPressTime) && (longPressActive == false))
+    {
+      longPressActive = true;
+    } else {
+    if (buttonActive == true)
+    {
+    	buttonActive = false;
+    }
+    if (longPressActive == true)
+    {
+      longPressActive = false;
+    } else
+    {
+
+    }
+  }
+}
+
+
   //Serial.println(digitalRead(screenSwitch));
+  /* Original Button Code
   if(screenSwitchState == LOW)
   {
     currentScreen = 1;
@@ -37,4 +63,5 @@ void loop()
     homeScreen();
     previousScreen = 2;
   }
+  */
 }
