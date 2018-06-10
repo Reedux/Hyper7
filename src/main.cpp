@@ -33,24 +33,17 @@ void loop()
     if (buttonActive == true)
     {
       if(currentScreen == 0)
-      {
-        currentScreen = 1;
-      } else if(currentScreen == 1)
-      {
-        currentScreen = 0;
-      }
+      {currentScreen = 1;}
+      if(currentScreen == 1)
+      {currentScreen = 0;}
     	buttonActive = false;
     }
     if (longPressActive == true)
     {
       if(lightStatus == 0)
-      {
-        lightStatus = 1;
-      }
+      {lightStatus = 1;}
       if(lightStatus == 1)
-      {
-        lightStatus = 0;
-      }
+      {lightStatus = 0;}
       lightStatus = 1;
       longPressActive = false;
       }
