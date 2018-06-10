@@ -24,7 +24,7 @@ void loop()
     {
       clearScreen();
     }
-    screenOne();
+    batteryScreen();
     previousScreen = 1;
   }
   else
@@ -34,7 +34,7 @@ void loop()
     {
       clearScreen();
     }
-    screenTwo();
+    homeScreen();
     previousScreen = 2;
   }
 }

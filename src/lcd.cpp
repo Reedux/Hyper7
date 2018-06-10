@@ -23,7 +23,7 @@ void clearScreen()
   lcd.clear();
 }
 
-void screenOne()
+void batteryScreen()
 {
 lcd.setCursor(0,0);
 lcd.print("1s=" + String(oneCell,2));
@@ -39,7 +39,7 @@ lcd.print("4s=" + String(fourCell,2));
 
 }
 
-void screenTwo()
+void homeScreen()
 {
   unsigned long Now = millis()/1000;
   Seconds = Now%60;
