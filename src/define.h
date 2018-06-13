@@ -24,6 +24,11 @@ extern int Minutes;
 
 extern int lightStatus;
 
+extern int batteryCellOnePin;
+extern int batteryCellTwoPin;
+extern int batteryCellThreePin;
+extern int batteryCellFourPin;
+
 extern float oneCell;
 extern float twoCell;
 extern float threeCell;

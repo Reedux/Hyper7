@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 bool buttonActive = false;
 bool longPressActive = false;
 long buttonTimer = 0;
@@ -24,7 +26,12 @@ int Minutes;
 
 int lightStatus = 0;
 
-float oneCell=3.78;
-float twoCell=3.78;
-float threeCell=3.78;
-float fourCell=3.78;
+int batteryCellOnePin = A0;
+int batteryCellTwoPin = A1;
+int batteryCellThreePin = A2;
+int batteryCellFourPin = A3;
+
+float oneCell=0.00;
+float twoCell=0.00;
+float threeCell=0.00;
+float fourCell=0.00;
