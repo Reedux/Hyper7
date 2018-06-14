@@ -12,6 +12,7 @@ oneCell = analogRead(batteryCellOnePin);
 void batteryTwo()
 {
 twoCell = analogRead(batteryCellTwoPin);
+twoCell = twoCell - oneCell;
 }
 
 void batteryThree()

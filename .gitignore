@@ -4,3 +4,5 @@
 .gcc-flags.json
 .clang_complete
 .gcc-flags.json
+
+*.json
